@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fotos - Casa Basilia</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="inicio">
+  <audio id="bg-music" autoplay loop>
+    <source src="arabic_music.mp3" type="audio/mp3" />
+  </audio>
+  <button onclick="toggleMusic()">⏯ Música</button>
+
   <header>
-    <h1>Casa Basilia</h1>
+    <h1>Fotos de las habitaciones</h1>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="barrio.html">El Barrio</a>
@@ -17,25 +22,24 @@
       <a href="contacto.html">Contacto</a>
     </nav>
   </header>
-  <main>
-    
-      <h2>Galería de Fotos</h2>
-      <p>Descubre los rincones únicos de nuestras habitaciones Mirador Mudéjar y Qubba Zirí.</p>
-    
-    
-    <div class="gallery">
-      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/532045880.jpg" alt="Mirador Mudéjar">
-      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/532046025.jpg" alt="Qubba Zirí">
-    </div>
-  </main>
-  
-<audio controls loop>
-  <source src="https://cdn.pixabay.com/audio/2023/01/12/audio_2a621ae6a4.mp3" type="audio/mpeg">
-  Tu navegador no soporta audio HTML5.
-</audio>
 
-  <footer>
-    © 2025 Casa Basilia
-  </footer>
+  <main>
+    <p>Haz clic en los enlaces para ver las fotos:</p>
+    <ul>
+      <li><a href="https://www.booking.com/hotel/es/casa-basilia-habitacion-mirador-mudejar.es.html">Mirador Mudéjar</a></li>
+      <li><a href="https://www.airbnb.es/rooms/1405847552926260221">Qubba Zirí</a></li>
+    </ul>
+  </main>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+  </script>
 </body>
 </html>
