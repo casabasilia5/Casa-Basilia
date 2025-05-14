@@ -4,42 +4,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Casa Basilia - Galería</title>
-  <link rel="stylesheet" href="css/styles.css"/>
+  <title>Casa Basilia - Inicio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="fotos">
+<body class="inicio">
+  <audio id="bg-music" autoplay loop>
+    <source src="arabic_music.mp3" type="audio/mp3" />
+  </audio>
+  <button onclick="toggleMusic()">⏯ Música</button>
+
   <header>
-    <h1>Galería de Casa Basilia</h1>
+    <h1>Casa Basilia</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="barrio.html">El Barrio</a>
+      <a href="fotos.html">Fotos</a>
+      <a href="reserva.html">Reservar</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
   </header>
 
   <main>
-    <section class="galeria">
-      <h2>Qubba Zirí</h2>
-      <div class="galeria-grid">
-        <img src="img/Qubba1.jpg" alt="Qubba Zirí 1"/>
-<img src="img/Qubba2.jpg" alt="Qubba Zirí 2"/>
-<img src="img/Qubba3.jpg" alt="Qubba Zirí 3"/>
-<img src="img/Qubba4.jpg" alt="Qubba Zirí 4"/>
-<img src="img/Qubba5.jpg" alt="Qubba Zirí 5"/>
-<img src="img/Qubba6.jpg" alt="Qubba Zirí 6"/>
-<img src="img/Qubba7.jpg" alt="Qubba Zirí 7"/>
-      </div>
-
-      <h2>Mirador Mudéjar</h2>
-      <div class="galeria-grid">
-        <img src="img/Atico1.jpg" alt="Mirador Mudéjar 1"/>
-<img src="img/Atico2.jpg" alt="Mirador Mudéjar 2"/>
-<img src="img/Atico3.jpg" alt="Mirador Mudéjar 3"/>
-<img src="img/Atico4.jpg" alt="Mirador Mudéjar 4"/>
-      </div>
-
-      <h2>Zonas Comunes</h2>
-      <div class="galeria-grid">
-        <img src="img/Comun1.jpg" alt="Zonas Comunes 1"/>
-<img src="img/Comun2.jpg" alt="Zonas Comunes 2"/>
-<img src="img/Comun3.jpg" alt="Zonas Comunes 3"/>
-      </div>
-    </section>
+    <h2>Bienvenidos a Casa Basilia</h2>
+    <p>Un refugio con encanto mudéjar en el corazón del Albaicín.</p>
   </main>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+  </script>
 </body>
 </html>
