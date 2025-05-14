@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inicio - Casa Basilia</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Casa Basilia - Inicio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="inicio">
+  <audio id="bg-music" autoplay loop>
+    <source src="arabic_music.mp3" type="audio/mp3" />
+  </audio>
+  <button onclick="toggleMusic()">⏯ Música</button>
+
   <header>
     <h1>Casa Basilia</h1>
     <nav>
@@ -17,32 +22,22 @@
       <a href="contacto.html">Contacto</a>
     </nav>
   </header>
-  <main>
-    
-      <h2>Bienvenido a Casa Basilia</h2>
-      <p>Una experiencia auténtica en el corazón de Granada. Nuestra casa combina el encanto del pasado andalusí con todas las comodidades modernas.</p>
-      <section class="habitaciones">
-        <div class="habitacion">
-          <h4>Mirador Mudéjar</h4>
-          <p>Con vistas al Albaicín, esta habitación evoca el arte mudéjar con luz natural y encanto histórico.</p>
-        </div>
-        <div class="habitacion">
-          <h4>Qubba Zirí</h4>
-          <p>Un rincón acogedor inspirado en los palacios del reino zirí, ideal para el descanso.</p>
-        </div>
-      </section>
-      <a class="btn" href="reserva.html">Reserva ahora</a>
-    
-    
-  </main>
-  
-<audio controls loop>
-  <source src="https://cdn.pixabay.com/audio/2023/01/12/audio_2a621ae6a4.mp3" type="audio/mpeg">
-  Tu navegador no soporta audio HTML5.
-</audio>
 
-  <footer>
-    © 2025 Casa Basilia
-  </footer>
+  <main>
+    <h2>Bienvenidos a Casa Basilia</h2>
+    <p>Un refugio con encanto mudéjar en el corazón del Albaicín.</p>
+  </main>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+  </script>
 </body>
 </html>
+
